@@ -5,6 +5,7 @@
 
 package ui;
 
+import model.EmpOperations;
 import model.Employee;
 
 /**
@@ -15,11 +16,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     /** Creates new form MainJFrame */
     
-    Employee emp;
+    EmpOperations empCrudOpertions;
     public MainJFrame() {
         initComponents();
         
-        emp = new Employee();
+        empCrudOpertions = new EmpOperations();
     }
 
     /** This method is called from within the constructor to
@@ -119,14 +120,14 @@ public class MainJFrame extends javax.swing.JFrame {
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
          // TODO add your handling code here:
          
-         CreateJPanel createPanel = new CreateJPanel(emp);
+         CreateJPanel createPanel = new CreateJPanel(empCrudOpertions);
          MainSplitPlane.setRightComponent(createPanel);
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
         
-        ViewJPanel viewPanel = new ViewJPanel(emp);
+        ViewJPanel viewPanel = new ViewJPanel(empCrudOpertions);
         MainSplitPlane.setRightComponent(viewPanel);
         
     }//GEN-LAST:event_btnViewActionPerformed

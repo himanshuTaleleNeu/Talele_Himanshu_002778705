@@ -5,6 +5,7 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import model.EmpOperations;
 import model.Employee;
 
 
@@ -17,11 +18,11 @@ public class CreateJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewJPanel
      */
-    Employee emp;
+    EmpOperations empCrudOpertions;
     
-    public CreateJPanel(Employee emp) {
+    public CreateJPanel(EmpOperations empCrudOpertions) {
         initComponents();
-        this.emp = emp;
+        this.empCrudOpertions = empCrudOpertions; 
     }
 
      /**  CreateJPanel(Employee emp) {
@@ -273,22 +274,42 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
          // TODO add your handling code here:      
+         
+         
+         String name            =  txtName.getText();
+         String empId           =  txtEmpId.getText();
+         String age             =  txtAge.getText();
+       //gender
+         String startDate       = txtStrtDate.getText();
+         String level           = txtLevel.getText();
+         String teamInfo        = txtTmInfo.getText();
+         String positionTitle   = txtPosTitle.getText();
+         String cellNum         = txtCellNum.getText();
+         String emailAdd        = txtEmlAdd.getText();
+         
          Employee emp = empCrudOpertions.addNewRecord();
          
-         emp.setName(txtName.getText());
-         emp.setEmpId(txtEmpId.getText());
-         emp.setAge(txtAge.getText());
-       //gender
-         emp.setStartDate(txtStrtDate.getText());
-         emp.setLevel(txtLevel.getText());
-         emp.setTeamInfo(txtTmInfo.getText());
-         emp.setPosTitle(txtPosTitle.getText());
-         emp.setCellNum(txtCellNum.getText());
-         emp.setEmailAdd(txtEmlAdd.getText());
-         
-            
+         emp.setName(name);
+         emp.setEmpId(empId);
+         emp.setAge(age);
+         emp.setStartDate(startDate);
+         emp.setLevel(level);
+         emp.setTeamInfo(teamInfo);
+         emp.setPosTitle(positionTitle);
+         emp.setCellNum(cellNum);
+         emp.setEmailAdd(emailAdd);
          
          JOptionPane.showMessageDialog(this, "Employee Data Saved Successfully");
+         
+         txtName.setText("");
+         txtEmpId.setText("");
+         txtAge.setText("");
+         txtStrtDate.setText("");
+         txtLevel.setText("");
+         txtTmInfo.setText("");
+         txtPosTitle.setText("");
+         txtCellNum.setText("");
+         txtEmlAdd.setText("");
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void txtTmInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTmInfoActionPerformed

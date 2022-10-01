@@ -34,5 +34,10 @@ public class EmpOperations {
         empCrudOpertions.add(newRecord);
         return newRecord;
     }
-           
+
+    public void deleteEmpData(Employee emp) {
+         empCrudOpertions.remove(emp);
+    }
+    
+
 }

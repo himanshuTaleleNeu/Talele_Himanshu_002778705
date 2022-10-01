@@ -16,111 +16,129 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblCreate" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblStrtDate" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblLevel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblEmpId" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblGender" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblAge" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblPhoto" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblCellNum" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblEmlAdd" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblPosTitle" alignment="0" min="-2" pref="268" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="365" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtAge" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtStrtDate" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtLevel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtPosTitle" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="rdBtnfemale" min="-2" pref="78" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rdBtnMale" min="-2" pref="75" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rdBtnOther" min="-2" pref="75" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblStrtDate" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblLevel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblName" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblEmpId" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblGender" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblAge" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblPhoto" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblCellNum" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblEmlAdd" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblPosTitle" alignment="0" min="-2" pref="268" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtAge" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtStrtDate" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtLevel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtPosTitle" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="rdBtnfemale" min="-2" pref="78" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="rdBtnMale" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="rdBtnOther" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtName" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtEmpId" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtEmlAdd" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtCellNum" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtTmInfo" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="txtName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtEmpId" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtEmlAdd" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtCellNum" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtTmInfo" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
+                          <Component id="lblCreate" alignment="0" min="-2" pref="1236" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="366" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="80" max="32767" attributes="0"/>
                   </Group>
+                  <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="btnView" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblCreate" min="-2" pref="31" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblName" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblEmpId" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblAge" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblGender" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="rdBtnfemale" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="rdBtnMale" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="rdBtnOther" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblStrtDate" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtStrtDate" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLevel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtTmInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblPosTitle" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtPosTitle" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCellNum" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtCellNum" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblEmlAdd" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="txtEmlAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="lblCreate" min="-2" pref="31" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="255" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnView" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="txtName" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtEmpId" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtAge" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="rdBtnfemale" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdBtnMale" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdBtnOther" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtStrtDate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtLevel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtTmInfo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtPosTitle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtCellNum" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtEmlAdd" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="lblName" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblEmpId" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblAge" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblGender" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblStrtDate" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblLevel" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblPosTitle" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblCellNum" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblEmlAdd" min="-2" pref="30" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lblPhoto" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="166" max="32767" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -246,6 +264,111 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Photo :"/>
       </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="empDataTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="10" rowCount="4">
+                <Column editable="false" title="Name" type="java.lang.Object"/>
+                <Column editable="false" title="Employeee ID" type="java.lang.Object"/>
+                <Column editable="false" title="Age" type="java.lang.Object"/>
+                <Column editable="false" title="Gender" type="java.lang.Object"/>
+                <Column editable="false" title="Start Date" type="java.lang.Object"/>
+                <Column editable="false" title="Level" type="java.lang.Object"/>
+                <Column editable="false" title="Team Info" type="java.lang.Object"/>
+                <Column editable="false" title="Position Title" type="java.lang.Object"/>
+                <Column editable="false" title="Cell phone Number" type="java.lang.Object"/>
+                <Column editable="false" title="Email Address" type="java.lang.Object"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="btnView">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnUpdate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Update"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnDelete">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -99,5 +99,11 @@ public class Employee {
     public void setEmailAdd(String emailAdd) {
         this.emailAdd = emailAdd;
     }
+
+    @Override
+    public String toString() 
+    {
+        return name;
+    }
     
 }
