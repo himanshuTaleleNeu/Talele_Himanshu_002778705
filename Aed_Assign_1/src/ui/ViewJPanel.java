@@ -144,6 +144,11 @@ public class ViewJPanel extends javax.swing.JPanel {
         });
 
         btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -294,9 +299,6 @@ public class ViewJPanel extends javax.swing.JPanel {
         
          // Gender
 //comboBox.getSelectedItem().toString();
-
-
-
          txtStrtDate.setText(String.valueOf(selectedEmp.getStartDate()));
          txtLevel.setText(String.valueOf(selectedEmp.getLevel()));
          txtTmInfo.setText(String.valueOf(selectedEmp.getTeamInfo()));
@@ -323,6 +325,32 @@ public class ViewJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, "Selected Row Deleted Successfully");
         poplulateEmployeeData();
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+   int selectedRowIndex = empDataTable.getSelectedRow();
+       if (selectedRowIndex <0){
+           
+           JOptionPane.showMessageDialog(this,"Please Select A Particular Row to Update the Data");
+           return;
+       }
+      DefaultTableModel model = (DefaultTableModel) empDataTable.getModel();
+      Employee selectEmp = (Employee) model.getValueAt(selectedRowIndex, 0);
+      
+      selectEmp.setName(String.valueOf(txtName.getText()));
+      selectEmp.setEmpId(String.valueOf(txtEmpId.getText()));
+      selectEmp.setAge(Integer.parseInt(txtAge.getText()));
+      //gender
+      selectEmp.setStartDate(String.valueOf(txtStrtDate.getText()));
+      selectEmp.setLevel(String.valueOf(txtLevel.getText()));
+      selectEmp.setTeamInfo(String.valueOf(txtTmInfo.getText()));
+      selectEmp.setPosTitle(String.valueOf(txtPosTitle.getText()));
+      selectEmp.setCellNum(String.valueOf(txtCellNum.getText()));
+      selectEmp.setEmailAdd(String.valueOf(txtEmlAdd.getText()));
+      poplulateEmployeeData();
+
+        
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

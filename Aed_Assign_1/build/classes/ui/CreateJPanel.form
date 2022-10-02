@@ -99,14 +99,14 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblEmpId" alignment="0" pref="31" max="32767" attributes="0"/>
+                  <Component id="lblEmpId" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Group type="102" alignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                              <Component id="txtEmpId" pref="30" max="32767" attributes="0"/>
+                              <Component id="txtEmpId" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="idlab" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="idlab" linkSize="4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                   </Group>
@@ -117,12 +117,12 @@
                       <Component id="lblAge" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Group type="102" alignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                               <Component id="txtAge" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="ageLab" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ageLab" linkSize="4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                   </Group>
@@ -173,12 +173,12 @@
                       <Component id="lblCellNum" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Group type="102" alignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                               <Component id="txtCellNum" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="cellLab" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="cellLab" min="-2" pref="31" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                   </Group>
@@ -189,12 +189,12 @@
                       <Component id="lblEmlAdd" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Group type="102" alignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                               <Component id="txtEmlAdd" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="emailLab" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="emailLab" linkSize="4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                   </Group>
@@ -337,6 +337,9 @@
     <Component class="javax.swing.JLabel" name="idlab">
     </Component>
     <Component class="javax.swing.JLabel" name="emailLab">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="emailLabKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="cellLab">
     </Component>
