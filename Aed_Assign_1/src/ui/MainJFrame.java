@@ -47,6 +47,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
         btnSearch.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         btnCreate.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         btnCreate.setText("Create");
@@ -131,6 +136,12 @@ public class MainJFrame extends javax.swing.JFrame {
         MainSplitPlane.setRightComponent(viewPanel);
         
     }//GEN-LAST:event_btnViewActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+                SearchJPanel searchPanel = new SearchJPanel(empCrudOpertions);
+        MainSplitPlane.setRightComponent(searchPanel);
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments

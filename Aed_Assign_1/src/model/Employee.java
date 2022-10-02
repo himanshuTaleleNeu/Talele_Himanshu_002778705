@@ -11,7 +11,7 @@ package model;
 public class Employee {
     private String name;
     private String empId;
-    private String age;
+    private int age;
     private String gender;
     private String startDate;
     private String level;
@@ -44,11 +44,11 @@ public class Employee {
         this.empId = empId;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -105,5 +105,6 @@ public class Employee {
     {
         return name;
     }
-    
+
+
 }

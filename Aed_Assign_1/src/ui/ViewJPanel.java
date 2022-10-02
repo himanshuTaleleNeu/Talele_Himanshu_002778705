@@ -53,10 +53,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtEmlAdd = new javax.swing.JTextField();
         lblName = new javax.swing.JLabel();
         lblEmpId = new javax.swing.JLabel();
-        rdBtnfemale = new javax.swing.JRadioButton();
-        rdBtnMale = new javax.swing.JRadioButton();
         lblGender = new javax.swing.JLabel();
-        rdBtnOther = new javax.swing.JRadioButton();
         lblAge = new javax.swing.JLabel();
         lblPhoto = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -64,6 +61,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         btnView = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
+        cmbGender = new javax.swing.JComboBox<>();
 
         lblStrtDate.setText("Start Date :");
 
@@ -111,23 +109,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblEmpId.setText("Employee ID :");
         lblEmpId.setPreferredSize(new java.awt.Dimension(85, 20));
 
-        rdBtnfemale.setText("Female");
-        rdBtnfemale.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdBtnfemaleActionPerformed(evt);
-            }
-        });
-
-        rdBtnMale.setText("Male");
-        rdBtnMale.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdBtnMaleActionPerformed(evt);
-            }
-        });
-
         lblGender.setText("Gender :");
-
-        rdBtnOther.setText("Other");
 
         lblAge.setText("Age :");
 
@@ -198,17 +180,12 @@ public class ViewJPanel extends javax.swing.JPanel {
                                     .addComponent(txtStrtDate)
                                     .addComponent(txtLevel)
                                     .addComponent(txtPosTitle)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(rdBtnfemale, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rdBtnMale, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rdBtnOther, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(txtName)
                                     .addComponent(txtEmpId)
                                     .addComponent(txtEmlAdd)
                                     .addComponent(txtCellNum)
-                                    .addComponent(txtTmInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtTmInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbGender, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(lblCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 1236, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 80, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -242,12 +219,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addComponent(txtEmpId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rdBtnfemale)
-                            .addComponent(rdBtnMale)
-                            .addComponent(rdBtnOther))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                         .addComponent(txtStrtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -266,7 +238,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbGender))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblStrtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -301,14 +275,6 @@ public class ViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmlAddActionPerformed
 
-    private void rdBtnfemaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtnfemaleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdBtnfemaleActionPerformed
-
-    private void rdBtnMaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtnMaleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdBtnMaleActionPerformed
-
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
                int selectedRowIndex = empDataTable.getSelectedRow();
@@ -322,15 +288,21 @@ public class ViewJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) empDataTable.getModel(); 
         Employee selectedEmp = (Employee) model.getValueAt(selectedRowIndex, 0);
         
-         txtName.setText(selectedEmp.getName());
-         txtEmpId.setText(selectedEmp.getEmpId());
-         txtAge.setText(selectedEmp.getAge());
-         txtStrtDate.setText(selectedEmp.getStartDate());
-         txtLevel.setText(selectedEmp.getLevel());
-         txtTmInfo.setText(selectedEmp.getTeamInfo());
-         txtPosTitle.setText(selectedEmp.getPosTitle());
-         txtCellNum.setText(selectedEmp.getCellNum());
-         txtEmlAdd.setText(selectedEmp.getEmailAdd());
+         txtName.setText(String.valueOf(selectedEmp.getName()));
+         txtEmpId.setText(String.valueOf(selectedEmp.getEmpId()));
+         txtAge.setText(String.valueOf(selectedEmp.getAge()));
+        
+         // Gender
+//comboBox.getSelectedItem().toString();
+
+
+
+         txtStrtDate.setText(String.valueOf(selectedEmp.getStartDate()));
+         txtLevel.setText(String.valueOf(selectedEmp.getLevel()));
+         txtTmInfo.setText(String.valueOf(selectedEmp.getTeamInfo()));
+         txtPosTitle.setText(String.valueOf(selectedEmp.getPosTitle()));
+         txtCellNum.setText(String.valueOf(selectedEmp.getCellNum()));
+         txtEmlAdd.setText(String.valueOf(selectedEmp.getEmailAdd()));
     }//GEN-LAST:event_btnViewActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
@@ -357,6 +329,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
+    private javax.swing.JComboBox<String> cmbGender;
     private javax.swing.JTable empDataTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -371,9 +344,6 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPhoto;
     private javax.swing.JLabel lblPosTitle;
     private javax.swing.JLabel lblStrtDate;
-    private javax.swing.JRadioButton rdBtnMale;
-    private javax.swing.JRadioButton rdBtnOther;
-    private javax.swing.JRadioButton rdBtnfemale;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtCellNum;
     private javax.swing.JTextField txtEmlAdd;
@@ -394,17 +364,15 @@ public class ViewJPanel extends javax.swing.JPanel {
         {
             Object[] row = new Object[10];
             row[0] = emp;
-            row[1] = emp.getName();
-            row[2] = emp.getEmpId();
-            row[3] = emp.getAge();
-            //gender
+            row[1] = emp.getEmpId();
+            row[2] = emp.getAge();
+            row[3] = emp.getGender();
             row[4] = emp.getStartDate();
             row[5] = emp.getLevel();
             row[6] = emp.getTeamInfo();
             row[7] = emp.getPosTitle();
             row[8] = emp.getCellNum();
             row[9] = emp.getEmailAdd();
-            
             model.addRow(row);
         }      
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -41,18 +41,12 @@
                                   <Component id="txtStrtDate" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtLevel" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtPosTitle" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="rdBtnfemale" min="-2" pref="78" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rdBtnMale" min="-2" pref="75" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rdBtnOther" min="-2" pref="75" max="-2" attributes="0"/>
-                                  </Group>
                                   <Component id="txtName" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtEmpId" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtEmlAdd" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtCellNum" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtTmInfo" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
+                                  <Component id="cmbGender" alignment="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="lblCreate" alignment="0" min="-2" pref="1236" max="-2" attributes="0"/>
@@ -95,13 +89,7 @@
                       <Component id="txtEmpId" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtAge" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="rdBtnfemale" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rdBtnMale" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rdBtnOther" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="39" max="32767" attributes="0"/>
                       <Component id="txtStrtDate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtLevel" min="-2" max="-2" attributes="0"/>
@@ -121,7 +109,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblAge" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lblGender" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblGender" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="cmbGender" alignment="3" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblStrtDate" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -229,30 +220,9 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="rdBtnfemale">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Female"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdBtnfemaleActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="rdBtnMale">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Male"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdBtnMaleActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="lblGender">
       <Properties>
         <Property name="text" type="java.lang.String" value="Gender :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="rdBtnOther">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Other"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblAge">
@@ -369,6 +339,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cmbGender">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
