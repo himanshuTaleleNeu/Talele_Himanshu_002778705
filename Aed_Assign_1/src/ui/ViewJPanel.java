@@ -406,7 +406,6 @@ public class ViewJPanel extends javax.swing.JPanel {
             row[9] = emp.getEmailAdd();
             
             model.addRow(row);
-        }
-      
+        }      
     }
 }
