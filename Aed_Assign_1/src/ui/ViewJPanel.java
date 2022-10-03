@@ -394,21 +394,24 @@ public class ViewJPanel extends javax.swing.JPanel {
        }
       DefaultTableModel model = (DefaultTableModel) empDataTable.getModel();
       Employee selectEmp = (Employee) model.getValueAt(selectedRowIndex, 0);
-      
-      selectEmp.setName(String.valueOf(txtName.getText()));
-      selectEmp.setEmpId(String.valueOf(txtEmpId.getText()));
-      selectEmp.setAge(Integer.parseInt(txtAge.getText()));
-      String gender = cmbGender.getSelectedItem().toString();
-      selectEmp.setGender(gender);
-      selectEmp.setStartDate(String.valueOf(txtStrtDate.getText()));
-      selectEmp.setLevel(String.valueOf(txtLevel.getText()));
-      selectEmp.setTeamInfo(String.valueOf(txtTmInfo.getText()));
-      selectEmp.setPosTitle(String.valueOf(txtPosTitle.getText()));
-      selectEmp.setCellNum(String.valueOf(txtCellNum.getText()));
-      selectEmp.setEmailAdd(String.valueOf(txtEmlAdd.getText()));
-      selectEmp.setPhoto(fileLocation);
-      poplulateEmployeeData();
-  
+      boolean validation = validationForFields();
+      if(validation)
+      {
+          selectEmp.setName(String.valueOf(txtName.getText()));
+          selectEmp.setEmpId(String.valueOf(txtEmpId.getText()));
+          selectEmp.setAge(Integer.parseInt(txtAge.getText()));
+          String gender = cmbGender.getSelectedItem().toString();
+          selectEmp.setGender(gender);
+          selectEmp.setStartDate(String.valueOf(txtStrtDate.getText()));
+          selectEmp.setLevel(String.valueOf(txtLevel.getText()));
+          selectEmp.setTeamInfo(String.valueOf(txtTmInfo.getText()));
+          selectEmp.setPosTitle(String.valueOf(txtPosTitle.getText()));
+          selectEmp.setCellNum(String.valueOf(txtCellNum.getText()));
+          selectEmp.setEmailAdd(String.valueOf(txtEmlAdd.getText()));
+          selectEmp.setPhoto(fileLocation);
+          poplulateEmployeeData();
+      }
+
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnUpdatePicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdatePicActionPerformed
@@ -473,5 +476,108 @@ public class ViewJPanel extends javax.swing.JPanel {
             row[9] = emp.getEmailAdd();
             model.addRow(row);
         }      
+    }
+    private boolean validationForFields()
+    {
+        if(!txtName.getText().matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+        {
+            JOptionPane.showMessageDialog(this," Invalid name. ");
+            txtName.requestFocus();
+            txtName.setText("");
+            return false;
+        }
+        else if(txtName.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Name Cannot be blank, Please Enter Employee Name");
+            txtName.requestFocus();
+            txtName.setText("");
+            return false;
+        }
+        else if(!txtEmpId.getText().matches("^[0-9]{0,6}$"))
+        {
+            JOptionPane.showMessageDialog(this," Invalid Employee ");
+            txtEmpId.requestFocus();
+            return false;
+        }
+        else if(txtEmpId.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Employee ID Can't be blank, please enter Employee ");
+            txtEmpId.requestFocus();
+            txtEmpId.setText("");
+            return false;
+        }
+        else if(txtAge.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Age can't be blank ");
+            txtEmpId.requestFocus();
+            txtEmpId.setText("");
+            return false;
+        }
+        else if(!txtAge.getText().matches("^0?(1[89]|[2-9]\\d)$"))
+        {
+            JOptionPane.showMessageDialog(this," Employee should be between 22 to 75 years old. ");
+            txtAge.requestFocus();
+            txtAge.setText("");
+            return false;
+        }
+        else if(cmbGender.getSelectedItem().toString().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this," Please Select a Gender For Employee ");
+            cmbGender.requestFocus();
+            cmbGender.setSelectedItem(-1);
+            return false;
+        }        
+        else if(txtStrtDate.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Date cannot be Blank !! ");
+            txtStrtDate.requestFocus();
+            txtStrtDate.setText("");
+            return false;
+        }     
+        else if(!txtStrtDate.getText().matches("^(1[0-2]|0[1-9])/(3[01]|[12][0-9]|0[1-9])/[0-9]{4}$"))
+        {
+            JOptionPane.showMessageDialog(this," Invalid Date format MM/DD/YYYY !! ");
+            txtStrtDate.requestFocus();
+            txtStrtDate.setText("");
+            return false;
+        }
+        else if(txtCellNum.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this,"Please enter the Cell Number !!");
+            txtCellNum.requestFocus();
+            txtCellNum.setText("");
+            return false;
+        }   
+        else if(txtLevel.getText().length()==0)
+            {
+            JOptionPane.showMessageDialog(this," Level cannot be blank ");
+            txtLevel.requestFocus();
+            txtLevel.setText("");
+            return false;
+        }
+        else if(txtTmInfo.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Team Information cannot be blank please enter employee's team details. ");
+            txtTmInfo.requestFocus();
+            txtTmInfo.setText("");
+            return false;
+        }
+        else if(txtEmlAdd.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Please enter the Email Id ");
+            txtEmlAdd.requestFocus();
+            txtEmlAdd.setText("");
+            return false;
+        }
+        else
+            if(!txtEmlAdd.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+            + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"))
+            {
+            JOptionPane.showMessageDialog(this," Invalid email address ");
+            txtEmlAdd.requestFocus();
+            txtEmlAdd.setText("");
+            return false;
+        }
+            return true;
     }
 }
