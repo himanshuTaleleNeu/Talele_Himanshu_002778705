@@ -19,11 +19,19 @@ public class Employee {
     private String posTitle;
     private String cellNum;
     private String emailAdd; 
+    private String photo;
 
     public String getName() {
         return name;
     }
 
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }    
+    
+    public String getPhoto() {
+        return photo;
+    }
     public String getPosTitle() {
         return posTitle;
     }
@@ -105,6 +113,4 @@ public class Employee {
     {
         return name;
     }
-
-
 }
