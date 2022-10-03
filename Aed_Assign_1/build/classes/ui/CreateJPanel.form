@@ -106,7 +106,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="173" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="lblPic" min="-2" pref="217" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
           </Group>

@@ -166,6 +166,8 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        cmbGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male", "Other" }));
+
         btnUpdatePic.setText("Uplaod Photo");
         btnUpdatePic.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,8 +342,16 @@ public class ViewJPanel extends javax.swing.JPanel {
          txtName.setText(String.valueOf(selectedEmp.getName()));
          txtEmpId.setText(String.valueOf(selectedEmp.getEmpId()));
          txtAge.setText(String.valueOf(selectedEmp.getAge()));
-         // Gender
-//comboBox.getSelectedItem().toString();
+      
+        int i = 0;
+        if (selectedEmp.getGender().equalsIgnoreCase("Female")) {
+            i = 1;
+        } else if (selectedEmp.getGender().equalsIgnoreCase("Male")) {
+            i = 2;
+        } else if (selectedEmp.getGender().equalsIgnoreCase("Other")) {
+            i = 3;
+        }
+        cmbGender.setSelectedItem(i);
          txtStrtDate.setText(String.valueOf(selectedEmp.getStartDate()));
          txtLevel.setText(String.valueOf(selectedEmp.getLevel()));
          txtTmInfo.setText(String.valueOf(selectedEmp.getTeamInfo()));
@@ -388,7 +398,8 @@ public class ViewJPanel extends javax.swing.JPanel {
       selectEmp.setName(String.valueOf(txtName.getText()));
       selectEmp.setEmpId(String.valueOf(txtEmpId.getText()));
       selectEmp.setAge(Integer.parseInt(txtAge.getText()));
-      //gender
+      String gender = cmbGender.getSelectedItem().toString();
+      selectEmp.setGender(gender);
       selectEmp.setStartDate(String.valueOf(txtStrtDate.getText()));
       selectEmp.setLevel(String.valueOf(txtLevel.getText()));
       selectEmp.setTeamInfo(String.valueOf(txtTmInfo.getText()));

@@ -247,7 +247,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                     .addComponent(txtEmlAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(emailLab, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblPic, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(288, 288, 288))
         );
@@ -352,18 +352,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void txtPosTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPosTitleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPosTitleActionPerformed
-     public static boolean isValidId(String identifier)
-    {
-        String regex = "^([a-zA-Z_$][a-zA-Z\\d_$]*)$";
-        Pattern p = Pattern.compile(regex);
-        if (identifier == null)
-        {
-            return false;
-        }
 
-        Matcher m = p.matcher(identifier);
-        return m.matches();
-    }
 
     private void txtTmInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTmInfoActionPerformed
         // TODO add your handling code here:
@@ -451,43 +440,16 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-
+     boolean validation = validationForFields();
+     if(validation)
+     {
         Employee emp = empCrudOpertions.addNewRecord();
 
         String name =  txtName.getText();
-
-//        if(name.length()==0)
-//        {
-//            JOptionPane.showMessageDialog(this," Name Can't be blank, Please Enter Employee Name !!");
-//            txtName.setText("");
-//            return;
-//        }
-//        if(txtName.getText().matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
-//        {
             emp.setName(name);
-//            return;
-//        }
-//        else
-//        {
-//            JOptionPane.showMessageDialog(this," Invalid Name Entered !! ");
-//            txtName.setText("");
-//            return;
-//        }
 
-        String empId  = txtEmpId.getText() ;
 
-//        boolean validId = isValidId(empId);
-//
-//        if(validId == true)
-//        {
-           // emp.setEmpId(empId);
-       // }
-//        else if(validId == false)
-//        {
-//            JOptionPane.showMessageDialog(this," ID Can't be blank, Please Enter Employee ID && Invalid ID Entered !! ");
-//            txtEmpId.setText("");
-//            return;
-//        }
+        String empId  = txtEmpId.getText();
         int age                =  Integer.parseInt(txtAge.getText());
         String gender          =  cmbGender.getSelectedItem().toString();
         String startDate       = txtStrtDate.getText();
@@ -521,6 +483,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtPosTitle.setText("");
         txtCellNum.setText("");
         txtEmlAdd.setText("");
+     }
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void emailLabKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailLabKeyReleased
@@ -570,4 +533,109 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtStrtDate;
     private javax.swing.JTextField txtTmInfo;
     // End of variables declaration//GEN-END:variables
+
+private boolean validationForFields()
+{
+        if(!txtName.getText().matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+        {
+            JOptionPane.showMessageDialog(this," Invalid name. ");
+            txtName.requestFocus();
+            txtName.setText("");
+            return false;
+        }
+        else if(txtName.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Name Cannot be blank, Please Enter Employee Name");
+            txtName.requestFocus();
+            txtName.setText("");
+            return false;
+        }
+        else if(!txtEmpId.getText().matches("^[0-9]{0,6}$"))
+        {
+            JOptionPane.showMessageDialog(this," Invalid Employee ");
+            txtEmpId.requestFocus();
+            return false;
+        }
+        else if(txtEmpId.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Employee ID Can't be blank, please enter Employee ");
+            txtEmpId.requestFocus();
+            txtEmpId.setText("");
+            return false;
+        }
+        else if(txtAge.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Age can't be blank ");
+            txtEmpId.requestFocus();
+            txtEmpId.setText("");
+            return false;
+        }
+        else if(!txtAge.getText().matches("^0?(1[89]|[2-9]\\d)$"))
+        {
+            JOptionPane.showMessageDialog(this," Employee should be between 22 to 75 years old. ");
+            txtAge.requestFocus();
+            txtAge.setText("");
+            return false;
+        }
+        else if(cmbGender.getSelectedItem().toString().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this," Please Select a Gender For Employee ");
+            cmbGender.requestFocus();
+            cmbGender.setSelectedItem(-1);
+            return false;
+        }        
+        else if(txtStrtDate.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Date cannot be Blank !! ");
+            txtStrtDate.requestFocus();
+            txtStrtDate.setText("");
+            return false;
+        }     
+        else if(!txtStrtDate.getText().matches("^(1[0-2]|0[1-9])/(3[01]|[12][0-9]|0[1-9])/[0-9]{4}$"))
+        {
+            JOptionPane.showMessageDialog(this," Invalid Date format MM/DD/YYYY !! ");
+            txtStrtDate.requestFocus();
+            txtStrtDate.setText("");
+            return false;
+        }
+        else if(txtCellNum.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this,"Please enter the Cell Number !!");
+            txtCellNum.requestFocus();
+            txtCellNum.setText("");
+            return false;
+        }   
+        else if(txtLevel.getText().length()==0)
+            {
+            JOptionPane.showMessageDialog(this," Level cannot be blank ");
+            txtLevel.requestFocus();
+            txtLevel.setText("");
+            return false;
+        }
+        else if(txtTmInfo.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Team Information cannot be blank please enter employee's team details. ");
+            txtTmInfo.requestFocus();
+            txtTmInfo.setText("");
+            return false;
+        }
+        else if(txtEmlAdd.getText().length()==0)
+        {
+            JOptionPane.showMessageDialog(this," Please enter the Email Id ");
+            txtEmlAdd.requestFocus();
+            txtEmlAdd.setText("");
+            return false;
+        }
+        else
+            if(!txtEmlAdd.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+            + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"))
+            {
+            JOptionPane.showMessageDialog(this," Invalid email address ");
+            txtEmlAdd.requestFocus();
+            txtEmlAdd.setText("");
+            return false;
+        }
+            return true;
+    }
 }
+    
